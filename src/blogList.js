@@ -1,6 +1,4 @@
-const BlogList = (props) => {
-
-    const blogs = props.blogs;
+const BlogList = ({ blogs }) => { // can type props without curlypraces to access all props 
 
     return ( 
         <ul>

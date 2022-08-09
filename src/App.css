@@ -21,11 +21,13 @@ footer .head {
 footer .ads {
   float: right;
   background-color: #ddd;
-
+  width: 50%;
 }
 
 footer .copyrights
 {
   float: left;
   background-color: #eee;
+  width: 50%;
+
 }

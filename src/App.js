@@ -13,7 +13,7 @@ function App() {
 
   function testSomething( e )
   {
-    document.getElementById('xx').textContent += e.clientX + " " + e.clientY;
+    document.getElementById('xx').innerHTML += e.clientX + " " + e.clientY + '<br />';
 
     setNewMessage('This Message Has Replace BY useState function');
 
@@ -36,7 +36,13 @@ function App() {
       {
         id: 3,
         title: "Third Blog is here",
-        author: "Fedaa Emad",
+        author: "fedaaEmad",
+        body: "Lorem Ipsum some written things Lorem Ipsum some written things Lorem Ipsum some written things...",
+      },
+      {
+        id: 4,
+        title: "Fourth Blog is here",
+        author: "fedaaEmad",
         body: "Lorem Ipsum some written things Lorem Ipsum some written things Lorem Ipsum some written things...",
       },
   ]; 
@@ -55,7 +61,8 @@ function App() {
 
       <p id='xx'> </p>
 
-      <BlogList blogs={blogs} />
+      <BlogList blogs={blogs} title="All Blogs" />
+      <BlogList blogs={blogs.filter((blog) => blog.author === 'fedaaEmad')} title="Fedaa's Blogs" /> {/** reUsing Component */}
 
       <Footer />
 

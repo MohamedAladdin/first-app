@@ -5,7 +5,7 @@ const BlogList = ({ blogs }) => { // can type props without curlypraces to acces
             {
                 blogs.map((blog) => (
         
-                    <li key={blog.id}> { blog.title } </li>
+                    <li key={blog.id}> { blog.title }  :: { blog.author } </li>
         
                 ))
             }
